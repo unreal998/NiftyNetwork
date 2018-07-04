@@ -7,13 +7,15 @@ $panel-padding: 10px;
 $inside-padding: 7px;
 $header-height: 55px;
 $page-font-size: 0.9em;
-$header-font: "sans";
-$text-font: "monospace";
+$header-font: "Gadugi", sans-serif;
+$text-font: "Corbel",sans-serif;
 #root {
     background-color: $back-color;
     display: flex;
 }
-
+body{
+    background-color: $back-color
+}
 .siders {
     width: 10%;
 }
