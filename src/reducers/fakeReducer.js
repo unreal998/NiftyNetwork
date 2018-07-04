@@ -1,3 +1,3 @@
-export const fakeReducer = (state = "", action) => {
-    return state;
-};
+const fakeReducer = (state = '') => state;
+
+export default fakeReducer;
