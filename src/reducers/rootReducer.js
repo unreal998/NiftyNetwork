@@ -1,7 +1,6 @@
-import {combineReducers} from 'redux';
-import {fakeReducer} from "./fakeReducer";
+import { combineReducers } from 'redux';
+import { fakeReducer } from './fakeReducer';
 
 export default combineReducers({
-    fakeReducer
+  fakeReducer,
 });
-

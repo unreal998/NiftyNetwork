@@ -1,3 +1,3 @@
-export function* fakeSaga() {
-    console.log("Hello, I'm Saga");
+export default function* fakeSaga() {
+  yield console.log('Hello, I\'m Saga');
 }
