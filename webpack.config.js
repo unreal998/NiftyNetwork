@@ -3,6 +3,7 @@ const HtmlWepbackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
+    mode: "development",
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "App.js"
@@ -22,7 +23,12 @@ module.exports = {
                 options: {presets: ['env']}
             },
             {
-                test: /\.sass$/,
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader', 'eslint-loader']
+            },
+            {
+                test: /\.(css|scss)$/,
                 use: [
                   'style-loader',
                   'css-loader',
@@ -35,13 +41,13 @@ module.exports = {
                     loader: 'url-loader',
                 }]
             }
-            
+
     ]
     },
     plugins: [
         new HtmlWepbackPlugin({
             template:"./src/index.html"
-            
+
         })
     ]
-  }
+  };
