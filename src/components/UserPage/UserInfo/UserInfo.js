@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import photo from '../../../../icons/photo.png';
+import photo from '../../../icons/photo.png';
 import './UserInfo.scss';
 
 class UserInfo extends Component {

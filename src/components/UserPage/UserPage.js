@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import UserInfo from './components/UserInfo/UserInfo';
-import NewPosts from './components/NewPosts/NewPosts';
+import UserInfo from './UserInfo/UserInfo';
+import NewPosts from './NewPosts/NewPosts';
 
 import './UserPage.scss';
 

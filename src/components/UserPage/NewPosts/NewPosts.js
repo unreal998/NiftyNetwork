@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import './NewPosts.scss';
 
-import NotyPrevItem from './components/NotyPrevItem/NotyPrevItem';
+import NotyPrevItem from '../../NotyPrevItem/NotyPrevItem';
 
-import iconAlternative from '../../../../icons/photoIcon3.png';
+import iconAlternative from '../../../icons/photoIcon3.png';
 
 class NewPosts extends Component {
   render() {
