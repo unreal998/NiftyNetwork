@@ -1,0 +1,23 @@
+.headCorrespondWindow {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.headCorrespondWindow {
+  span {
+    flex: 1 1 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  img {
+    flex: 0 1 auto;
+  }
+}

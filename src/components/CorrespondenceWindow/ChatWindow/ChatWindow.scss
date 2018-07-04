@@ -1,0 +1,10 @@
+.chatWindow {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: white;
+  margin-top: 10px;
+  min-height: 500px;
+  border-radius: 5px;
+  padding: 20px 50px 0 50px;
+}
