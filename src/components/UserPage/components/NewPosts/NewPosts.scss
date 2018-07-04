@@ -1,0 +1,18 @@
+@import "../../../../sass/main";
+
+.newPostInfo {
+  margin-top: $panel-padding;
+  padding: $panel-padding;
+  background-color: $light;
+}
+.headlineText {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $panel-padding;
+  font-size: 17px;
+}
+
+.prevNotyItem {
+  display: flex;
+  padding: $inside-padding;
+}

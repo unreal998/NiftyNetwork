@@ -42,64 +42,12 @@ $text-font: "monospace";
     font-family: sans-serif;
 }
 
-.content {
-    margin-top: 15px;
-    display: flex;
-}
 
 .userNifts {
     flex: 1 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.userMainIcon {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    img {
-        width: 70%;
-    }
-}
-
-.userMainIcon,
-.userPersonalInfo,
-.newPostInfo {
-    background-color: $light;
-}
-
-.userPersonalInfo {
-    margin-top: $panel-margin;
-    padding: $panel-padding;
-    display: flex;
-    flex-direction: column;
-}
-
-.mainPersonalInfo {}
-
-.userInfoItem {
-    display: block;
-    font-size: $page-font-size;
-    color: #000;
-    line-height: 20px;
-}
-
-.newPostInfo {
-    margin-top: $panel-padding;
-    padding: $panel-padding;
-}
-
-.headlineText {
-    margin: 0;
-    padding: 0;
-    margin-bottom: $panel-padding;
-    font-size: 17px;
-}
-
-.prevNotyItem {
-    display: flex;
-    padding: $inside-padding;
 }
 
 .toggler {
