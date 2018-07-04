@@ -1,0 +1,116 @@
+$back-color: #e4ecf0;
+$light: #fff;
+$main-gray: #888;
+$font-size-header: 1.2em;
+$panel-margin: 15px;
+$panel-padding: 10px;
+$inside-padding: 7px;
+$header-height: 55px;
+$page-font-size: 0.9em;
+$header-font: "sans";
+$text-font: "monospace";
+#root {
+    background-color: $back-color;
+    display: flex;
+}
+
+.siders {
+    width: 10%;
+}
+
+.headerPart {
+    width: 100%;
+    height: $header-height;
+    background-color: $light;
+}
+
+.userProfileName {
+    color: $main-gray;
+    font-size: $font-size-header;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.appBtn {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+.page {
+    flex-grow: 1;
+    font-family: sans-serif;
+}
+
+.content {
+    margin-top: 15px;
+    display: flex;
+}
+
+.userNifts {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userMainIcon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+        width: 70%;
+    }
+}
+
+.userMainIcon,
+.userPersonalInfo,
+.newPostInfo {
+    background-color: $light;
+}
+
+.userPersonalInfo {
+    margin-top: $panel-margin;
+    padding: $panel-padding;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainPersonalInfo {}
+
+.userInfoItem {
+    display: block;
+    font-size: $page-font-size;
+    color: #000;
+    line-height: 20px;
+}
+
+.newPostInfo {
+    margin-top: $panel-padding;
+    padding: $panel-padding;
+}
+
+.headlineText {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $panel-padding;
+    font-size: 17px;
+}
+
+.prevNotyItem {
+    display: flex;
+    padding: $inside-padding;
+}
+
+.toggler {
+    background-color: inherit;
+    color: $main-gray;
+    text-transform: lowercase;
+    border: none;
+    font-size: 0.9*$page-font-size;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
