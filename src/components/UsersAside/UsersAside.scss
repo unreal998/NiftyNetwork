@@ -1,0 +1,17 @@
+.userAside {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.userAside {
+  div.userContactAside {
+    margin-top: 10px;
+  }
+}
+
+.userAside > .userContactAside:first-child {
+  margin-top: 0;
+}
