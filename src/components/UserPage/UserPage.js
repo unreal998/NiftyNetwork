@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import UserInfo from './UserInfo/UserInfo';
 import NewPosts from './NewPosts/NewPosts';
+import AddNiftPanel from './AddNiftPanel/AddNiftPanel';
 
 import './UserPage.scss';
 
@@ -14,6 +15,10 @@ class UserPage extends Component {
               <UserInfo/>
               <NewPosts/>
           </div>
+          <main className="userNifts">
+            <AddNiftPanel/>
+            <div/>
+          </main>
         </div>
     );
   }

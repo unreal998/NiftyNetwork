@@ -4,3 +4,9 @@
   margin-top: $panel-margin;
   display: flex;
 }
+.userNifts {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
