@@ -16,7 +16,7 @@ const App = (props) => {
 
   switch (filter) {
     case 'home':
-      RenderComponent = FakeHome;
+      RenderComponent = UserPage;
       break;
     case 'messages':
       RenderComponent = FakeMessages;
@@ -32,8 +32,7 @@ const App = (props) => {
     <Fragment>
         <Sider/>
         <div className="page">
-            <Header/>
-            <UserPage/>
+          <Header/>
           <RenderComponent/>
         </div>
         <Sider/>

@@ -1,22 +1,13 @@
 @import "../../../sass/main";
 
-@mixin circleIcon($width) {
-  width: $width;
-  height: $width;
-  border-radius: $width;
-}
+
 .addNiftPanel{
-  
-  margin-left: $panel-margin;
   display: flex;
   align-items: flex-center;
   background-color: rgba($color: $back-color+50, $alpha: 0.4);
  padding: $inside-padding;
 }
-.userMinIcon{
-  
-  @include circleIcon(50px);
-}
+
 #niftItput{
   box-sizing: content-box;
   display: block;

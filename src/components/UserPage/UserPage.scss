@@ -3,10 +3,24 @@
 .content {
   margin-top: $panel-margin;
   display: flex;
+
+  font-size: $page-font-size;
+
+  
+
+}
+.infoBlock{
+  flex:  0 1 200px;
+  
 }
 .userNifts {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
   align-items: stretch;
   flex-direction: column;
+  margin-left: $panel-margin;
+  width: 50%;
+}
+.niftList{
+  
 }
