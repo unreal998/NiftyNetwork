@@ -1,14 +1,13 @@
-
-export function LikeMedia() {
+export function LikeMedia(idNift) {
   return ({
     type: 'USER_LIKE_ACTION',
-    likes: 1,
+    idNift,
   });
 }
 
-export function RepostMedia() {
+export function RepostMedia(idNift) {
   return ({
     type: 'USER_REPOST_ACTION',
-    reposts: 1,
+    idNift,
   });
 }

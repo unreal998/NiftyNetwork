@@ -1,0 +1,24 @@
+@import "../../../sass/main";
+
+.userMainIcon{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: $light;
+  img {
+    width: 70%;
+  } 
+}
+.userPersonalInfo {
+  margin-top: $panel-margin;
+  padding: $panel-padding;
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+}
+.userPesonalInfoItem {
+  display: block;
+  font-size: $page-font-size;
+  color: #000;
+  line-height: 20px;
+}

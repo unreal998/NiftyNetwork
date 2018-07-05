@@ -16,7 +16,7 @@ import './Notification.scss';
 function Notifications() {
   return (
       <div className="notificationContainer">
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
             <p>23.08.2018</p>
             <div className="userDataNift">
@@ -40,7 +40,7 @@ function Notifications() {
           </div>
         </div>
 
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">
@@ -64,7 +64,7 @@ function Notifications() {
           </div>
         </div>
 
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
             <p>23.08.2018</p>
             <div className="userDataNift">
@@ -88,7 +88,7 @@ function Notifications() {
           </div>
         </div>
 
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">
@@ -112,7 +112,7 @@ function Notifications() {
           </div>
         </div>
 
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">
@@ -136,7 +136,7 @@ function Notifications() {
           </div>
         </div>
 
-      <div className="nift">
+      <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">
@@ -160,7 +160,7 @@ function Notifications() {
           </div>
         </div>
 
-      <div className="nift">
+      <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">
@@ -183,7 +183,7 @@ function Notifications() {
             </div>
           </div>
         </div>
-        <div className="nift">
+        <div className="notificationNift">
           <div className="niftHeader">
           <p>23.08.2018</p>
           <div className="userDataNift">

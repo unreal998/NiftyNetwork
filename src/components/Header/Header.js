@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Header.scss';
 import photoMin from '../../icons/photo-min.png';
@@ -14,16 +15,34 @@ function Header() {
         <nav className="navbar">
             <ul className="nav">
                 <li className="navItem">
-                    <img src={homeIcon} alt="" className="itemImg" />
-                    <a href="#" className="navLink">Home</a>
+                    
+
+                  <Link
+                    className="navLink"
+                    to='/home'
+                  >
+                  <img src={homeIcon} alt="" className="itemImg" />
+                  Home
+                  </Link>
                 </li>
                 <li className="navItem">
-                    <img src={notifyIcon} alt="" className="itemImg" />
-                    <a href="#" className="navLink">Notifycation</a>
+                    
+                  <Link
+                    className="navLink"
+                    to='/notifycation'
+                  >
+                  <img src={notifyIcon} alt="" className="itemImg" />
+                  Notifycation</Link>
                 </li>
                 <li className="navItem">
-                    <img src={msgIcon} alt="" className="itemImg" />
-                    <a href="#" className="navLink">Messages</a>
+                    
+                  <Link
+                    className="navLink"
+                    to='/messages'
+                  >
+                  <img src={msgIcon} alt="" className="itemImg" />
+                  Messages
+                  </Link>
                 </li>
             </ul>
         </nav>

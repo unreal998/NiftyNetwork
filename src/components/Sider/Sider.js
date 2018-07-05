@@ -1,4 +1,5 @@
 import React from 'react';
+import './Sider.scss';
 
 function Sider() {
   return <div className='siders'>

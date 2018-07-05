@@ -11,6 +11,9 @@ $header-font: "Gadugi", sans-serif;
 $text-font: "Corbel",sans-serif;
 #root {
     background-color: $back-color;
+}
+
+#root {
     display: flex;
 }
 body{
@@ -18,19 +21,6 @@ body{
 }
 .siders {
     width: 10%;
-}
-
-.headerPart {
-    width: 100%;
-    height: $header-height;
-    background-color: $light;
-}
-
-.userProfileName {
-    color: $main-gray;
-    font-size: $font-size-header;
-    font-weight: bold;
-    font-family: sans-serif;
 }
 
 .appBtn {
@@ -45,12 +35,9 @@ body{
 .page {
     flex-grow: 1;
     font-family: sans-serif;
+    width: 80%;
 }
 
-.content {
-    margin-top: 15px;
-    display: flex;
-}
 
 .userNifts {
     flex: 1 0 auto;
@@ -67,6 +54,12 @@ body{
         width: 70%;
     }
 }
+.userMinIcon{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
+}
 
 .userMainIcon,
 .userPersonalInfo,
@@ -80,8 +73,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-
-.mainPersonalInfo {}
 
 .userInfoItem {
     display: block;
@@ -108,6 +99,7 @@ body{
 }
 
 .toggler {
+    width: 100%;
     background-color: inherit;
     color: $main-gray;
     text-transform: lowercase;
