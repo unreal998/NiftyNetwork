@@ -33,10 +33,6 @@ body {
     font-family: sans-serif;
 }
 
-.content {
-    margin-top: 15px;
-    display: flex;
-}
 
 .userNifts {
     flex: 1 0 auto;
@@ -52,6 +48,12 @@ body {
     img {
         width: 70%;
     }
+}
+.userMinIcon{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
 }
 
 .userMainIcon,
@@ -92,6 +94,7 @@ body {
 }
 
 .toggler {
+    width: 100%;
     background-color: inherit;
     color: $main-gray;
     text-transform: lowercase;

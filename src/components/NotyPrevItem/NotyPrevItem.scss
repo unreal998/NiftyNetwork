@@ -1,0 +1,14 @@
+@import '../../sass/main.scss';
+
+.prevNotyItem {
+  display: flex;
+  padding: $inside-padding;
+}
+.authorIcon{
+  margin-right: 10px;
+}
+.notyInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

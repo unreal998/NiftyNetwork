@@ -1,0 +1,67 @@
+@import "../../../sass/main";
+
+.nift{
+
+  
+  background-color: $light;
+  margin-top: $panel-margin;
+  display: flex;
+  padding: $inside-padding;
+  padding-top: 20px;
+
+}
+.niftContent{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 0 10px;
+  width: 100%;
+  flex-shrink: 2;
+  
+}
+.niftImgs{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  img{
+    flex: 0 1 auto;
+  }
+}
+
+
+.niftRepost, .niftLike{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.niftSideBar{
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+}
+.niftTime{
+  align-self: flex-end;
+  font-size: 12px;
+  color: $main-gray;
+  flex: 1 0 auto;
+}
+.niftSideBtn {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 40px;
+  cursor: pointer;
+
+  &:hover{
+    background: rgba($color: #111, $alpha: .1);
+  }
+  img{
+    width: 20px;
+      display: block;
+  }
+  .niftStat{
+    font-weight: bold;
+  }
+}
+

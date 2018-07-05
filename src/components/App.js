@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import 'normalize.css';
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
+import UserPage from './UserPage/UserPage';
 
 import FakeHome from './FakeHome';
 import FakeMessages from './FakeMessages';
@@ -15,7 +16,7 @@ const App = (props) => {
 
   switch (filter) {
     case 'home':
-      RenderComponent = FakeHome;
+      RenderComponent = UserPage;
       break;
     case 'messages':
       RenderComponent = FakeMessages;
