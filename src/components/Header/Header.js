@@ -15,8 +15,6 @@ function Header() {
         <nav className="navbar">
             <ul className="nav">
                 <li className="navItem">
-                    
-
                   <Link
                     className="navLink"
                     to='/home'
