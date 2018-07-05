@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import App from './components/App';
 import rootReducer from './reducers/rootReducer';
@@ -18,8 +19,10 @@ const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App/>
+    <Provider store={ store }>
+      <Router>
+        <Route path='/:filter?' component={App}/>
+      </Router>
     </Provider>,
     document.getElementById('root'),
 );

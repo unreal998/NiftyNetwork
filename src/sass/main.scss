@@ -9,26 +9,17 @@ $header-height: 55px;
 $page-font-size: 0.9em;
 $header-font: "sans";
 $text-font: "monospace";
-#root {
+
+body {
     background-color: $back-color;
+}
+
+#root {
     display: flex;
 }
 
 .siders {
     width: 10%;
-}
-
-.headerPart {
-    width: 100%;
-    height: $header-height;
-    background-color: $light;
-}
-
-.userProfileName {
-    color: $main-gray;
-    font-size: $font-size-header;
-    font-weight: bold;
-    font-family: sans-serif;
 }
 
 .appBtn {
@@ -75,8 +66,6 @@ $text-font: "monospace";
     display: flex;
     flex-direction: column;
 }
-
-.mainPersonalInfo {}
 
 .userInfoItem {
     display: block;
