@@ -1,83 +1,13 @@
 @import "../../sass/main";
+@import '../../sass/form';
 
-.authPageContainer {
-  height: 500px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.authForm {
-  background-color: rgba($color: $back-color+50, $alpha: 0.4);
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .authField{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: stretch;
-    font-family: $text-font;
-  
-  }
-  label{
-    display: block;
-    width: 90px;
-    padding-left: $inside-padding;
-    font-weight: bold;
-    font-size: 16px;
-    color: #111;
-  
-  }
-  input{
-      display: block;
-      margin: 0 10px 10px 10px;
-      min-width: 40px;
-      resize: vertical;
-      flex: 1 0 auto;
-      border-radius: 10px;
-      border:none;
-      padding: 10px;
-      &:focus {
-        margin: -2px 8px 8px 8px;
-        border: 2px solid rgba($color: $main-gray, $alpha: 0.5);
-        outline: none;
-      }
-    }
-  
-  
-}
-
-.authHead{
-  color: $main-gray;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: $header-font;
-  margin-bottom: 30px;
-}
 .authBtns{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.authBtn{
-  border: none;
-  outline: none;
-  height: 30px;
-  border-radius: 5px;
-  margin: 0 10px 0 10px;
-  color: #fff;
-  &:hover{
-    cursor: pointer;
-  }
-  &:active {
-    transform: scale(0.95);
-  }
- 
-}
+
 .signInBtn{
     background-color: #579;
     &:hover {
@@ -92,18 +22,4 @@
   }
 }
 
-.authFooter{
-  font-size: 12px;
-  align-self: stretch;
-  
-}
-.authFooterItem{
-  margin: 10px;
-}
-.authFooterLink{
-  color: #119;
-  text-decoration: none;
-  &:hover{
-    text-decoration: underline;
-  }
-}
+

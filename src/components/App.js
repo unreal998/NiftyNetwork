@@ -7,6 +7,8 @@ import Sider from './Sider/Sider';
 import Notifications from './Notifications/Notifications';
 import UserPage from './UserPage/UserPage';
 import AuthPage from './AuthPage/AuthPage';
+import SignUpPage from './SignUpPage/SignUpPage';
+
 
 import FakeMessages from './FakeMessages';
 
@@ -27,6 +29,9 @@ const App = (props) => {
       break;
     case 'auth':
       RenderComponent = AuthPage;
+      break;
+    case 'signup':
+      RenderComponent = SignUpPage;
       break;
     default:
       RenderComponent = AuthPage;
