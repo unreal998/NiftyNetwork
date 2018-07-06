@@ -8,10 +8,7 @@ import Notifications from './Notifications/Notifications';
 import UserPage from './UserPage/UserPage';
 import AuthPage from './AuthPage/AuthPage';
 import SignUpPage from './SignUpPage/SignUpPage';
-
-
-import FakeMessages from './FakeMessages';
-
+import MessagesWindow from '../containers/MessagesWindow';
 
 const App = (props) => {
   const { filter } = props.match.params;
@@ -22,7 +19,7 @@ const App = (props) => {
       RenderComponent = UserPage;
       break;
     case 'messages':
-      RenderComponent = FakeMessages;
+      RenderComponent = MessagesWindow;
       break;
     case 'notifycation':
       RenderComponent = Notifications;
@@ -36,17 +33,16 @@ const App = (props) => {
     default:
       RenderComponent = AuthPage;
   }
-
-  return (
-    <Fragment>
+    return (
+      <Fragment>
         <Sider/>
         <div className="page">
           <Header/>
           <RenderComponent/>
         </div>
         <Sider/>
-    </Fragment>
-  );
+      </Fragment>
+    );
 };
 
 App.propTypes = {
