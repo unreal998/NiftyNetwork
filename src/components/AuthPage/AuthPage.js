@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AuthPage.scss';
+import PropTypes from 'prop-types';
 
 export default class AuthPage extends Component {
   render() {
@@ -24,8 +25,14 @@ export default class AuthPage extends Component {
           <div className="formFooter">
             <div className="authFooterItem"><a href="#" className="formFooterLink">Forgot password?</a></div>
           </div>
+          
        </div>
       </div>
     );
   }
 }
+
+
+AuthPage.propTypes = {
+  auth: PropTypes.func,
+};
