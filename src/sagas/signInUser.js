@@ -6,7 +6,7 @@ import { SIGN_IN_USER, successSignInUser, failureSignInUser } from '../actions/s
 function* signInUser(action) {
   try {
     const response = yield call(
-      [auth, auth.signInAndRetrieveDataWithEmailAndPassword],
+      [auth, auth.signInWithEmailAndPassword],
       action.email,
       action.password,
     );
