@@ -1,51 +1,39 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, Component } from 'react';
 
-import 'normalize.css';
+
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
-import Notifications from './Notifications/Notifications';
-import UserPage from './UserPage/UserPage';
 import AuthPage from './AuthPage/AuthPage';
+// import UserPage from './UserPage/UserPage';
+// import Notifications from './Notifications/Notifications'
+import Links from '../Links';
 
-import FakeMessages from './FakeMessages';
-
-
-const App = (props) => {
-  const { filter } = props.match.params;
-  let RenderComponent;
-
-  switch (filter) {
-    case 'home':
-      RenderComponent = UserPage;
-      break;
-    case 'messages':
-      RenderComponent = FakeMessages;
-      break;
-    case 'notifycation':
-      RenderComponent = Notifications;
-      break;
-    case 'auth':
-      RenderComponent = AuthPage;
-      break;
-    default:
-      RenderComponent = AuthPage;
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      auth: true,
+    };
   }
 
-  return (
-    <Fragment>
-        <Sider/>
-        <div className="page">
-          <Header/>
-          <RenderComponent/>
-        </div>
-        <Sider/>
-    </Fragment>
-  );
-};
+  Auth() {
+    this.setState({
+      auth: false,
+    });
+  }
 
-App.propTypes = {
-  match: PropTypes.object,
-};
+  render() {
+    console.log(this);
+    return (
+      <Fragment>
+          <Sider/>
+          <div className="page" >
+          {this.state.auth ? <div><Header/><Links/></div> : <AuthPage/>}
+          </div>
+          <Sider/>
+      </Fragment>
+    );
+  }
+}
 
 export default App;

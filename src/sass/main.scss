@@ -40,7 +40,10 @@ body{
 }
 
 
-
+.contentPage{
+  display: flex;
+  flex-direction: column;
+}
 .userMainIcon {
     display: flex;
     justify-content: center;

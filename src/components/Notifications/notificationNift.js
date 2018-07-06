@@ -38,8 +38,8 @@ Nnift.propTypes = {
   text: PropsType.string,
   name: PropsType.string,
   date: PropsType.string,
-  likes: PropsType.number,
-  repost: PropsType.number,
+  likes: PropsType.string,
+  repost: PropsType.string,
 };
 
 
