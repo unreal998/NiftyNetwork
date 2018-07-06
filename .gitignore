@@ -1,4 +1,4 @@
-
+.idea/
 # dependencies
 /node_modules
 
@@ -7,7 +7,7 @@
 
 # production
 /dist
-
+package-lock.json
 
 
 # misc

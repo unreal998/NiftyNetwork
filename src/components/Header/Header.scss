@@ -1,0 +1,68 @@
+@import "../../sass/main";
+
+.header {
+    background-color: $light;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    line-height: $header-height;
+    margin-left: 20px;
+}
+
+.itemImg {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    width: 1.3em;
+}
+
+.navLink {
+    color: $main-gray;
+    display: block;
+    text: {
+        decoration: none;
+        transform: uppercase;
+    }
+    font: {
+        size: 1.2em;
+        family: sans-serif;
+        weight: bold;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+.userIconMini {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #589;
+    margin-right: 10px;
+}
+
+.userProfileName {
+    color: $main-gray;
+    font-size: $font-size-header;
+    font-weight: bold;
+    font-family: sans-serif;
+}
