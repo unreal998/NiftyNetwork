@@ -7,17 +7,18 @@ $panel-padding: 10px;
 $inside-padding: 7px;
 $header-height: 55px;
 $page-font-size: 0.9em;
-$header-font: "sans";
-$text-font: "monospace";
-
-body {
+$header-font: "Gadugi", sans-serif;
+$text-font: "Corbel",sans-serif;
+#root {
     background-color: $back-color;
 }
 
 #root {
     display: flex;
 }
-
+body{
+    background-color: $back-color
+}
 .siders {
     width: 10%;
 }
@@ -26,11 +27,16 @@ body {
     background-color: inherit;
     border: none;
     outline: none;
+    text-align: unset;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
 }
 
 .page {
     flex-grow: 1;
     font-family: sans-serif;
+    width: 80%;
 }
 
 

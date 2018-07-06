@@ -15,26 +15,32 @@ function Header() {
         <nav className="navbar">
             <ul className="nav">
                 <li className="navItem">
-                    <img src={homeIcon} alt="" className="itemImg" />
-
                   <Link
                     className="navLink"
                     to='/home'
-                  >Home</Link>
+                  >
+                  <img src={homeIcon} alt="" className="itemImg" />
+                  Home
+                  </Link>
                 </li>
                 <li className="navItem">
-                    <img src={notifyIcon} alt="" className="itemImg" />
+                    
                   <Link
                     className="navLink"
                     to='/notifycation'
-                  >Notifycation</Link>
+                  >
+                  <img src={notifyIcon} alt="" className="itemImg" />
+                  Notifycation</Link>
                 </li>
                 <li className="navItem">
-                    <img src={msgIcon} alt="" className="itemImg" />
+                    
                   <Link
                     className="navLink"
                     to='/messages'
-                  >Messages</Link>
+                  >
+                  <img src={msgIcon} alt="" className="itemImg" />
+                  Messages
+                  </Link>
                 </li>
             </ul>
         </nav>

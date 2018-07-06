@@ -28,7 +28,7 @@ module.exports = {
                 use: ['babel-loader', 'eslint-loader']
             },
             {
-                test: /\.(css|scss)$/,
+                test: /\.(css|scss|sass)$/,
                 use: [
                   'style-loader',
                   'css-loader',
