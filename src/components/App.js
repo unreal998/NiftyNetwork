@@ -6,6 +6,7 @@ import Header from './Header/Header';
 import Sider from './Sider/Sider';
 import Notifications from './Notifications/Notifications';
 import UserPage from './UserPage/UserPage';
+import AuthPage from './AuthPage/AuthPage';
 
 import FakeMessages from './FakeMessages';
 
@@ -24,8 +25,11 @@ const App = (props) => {
     case 'notifycation':
       RenderComponent = Notifications;
       break;
+    case 'auth':
+      RenderComponent = AuthPage;
+      break;
     default:
-      RenderComponent = UserPage;
+      RenderComponent = AuthPage;
   }
 
   return (
