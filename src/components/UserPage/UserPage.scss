@@ -3,11 +3,7 @@
 .content {
   margin-top: $panel-margin;
   display: flex;
-
   font-size: $page-font-size;
-
-  
-
 }
 .infoBlock{
   flex:  0 1 200px;
@@ -17,9 +13,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin-left: $panel-margin;
   width: 50%;
-}
-.niftList{
-  
 }
