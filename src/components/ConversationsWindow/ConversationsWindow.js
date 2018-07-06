@@ -1,16 +1,22 @@
 import React from 'react';
 
-import './CorrespondWindow.scss';
+import './ConversationsWindow.scss';
 import HeadCorrespondWindow from './HeadCorrespondWindow/HeadCorrespondWindow';
 import ChatWindow from './ChatWindow/ChatWindow';
 import MessageInputField from './MessageInputField/MessageInputField';
+import databaseRef from '../../firebase/firebase';
 
-const CorrespondWindow = () => (
-    <div className="correspondWindow">
+class ConversationsWindow extends React.Component {
+
+  render() {
+    return (
+      <div className="correspondWindow">
         <HeadCorrespondWindow/>
         <ChatWindow/>
         <MessageInputField/>
-    </div>
-);
+      </div>
+    )
+  }
+}
 
-export default CorrespondWindow;
+export default ConversationsWindow;

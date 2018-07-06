@@ -3,18 +3,17 @@ import React from 'react';
 import './UsersAside.scss';
 import UserContactAside from './UserContactAside/UserContactAside';
 
-const UsersAside = () => (
+const UsersAside = (props) => (
     <div className="userAside">
-        <UserContactAside colMessages={15}/>
-        <UserContactAside colMessages={1}/>
-        <UserContactAside colMessages={5}/>
-        <UserContactAside colMessages={7}/>
-        <UserContactAside colMessages={3}/>
-        <UserContactAside colMessages={15}/>
-        <UserContactAside colMessages={5}/>
-        <UserContactAside colMessages={7}/>
-        <UserContactAside colMessages={15}/>
-        <UserContactAside colMessages={15}/>
+      {
+        (function () {
+          const users = Object.values(props.users);
+
+          return users.map(user => (
+            <UserContactAside key={user.id} name={user.name} surname={user.surname} icon={user.icon} anmountMessages={0}/>
+          ));
+        })()
+      }
     </div>
 );
 

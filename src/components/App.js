@@ -5,41 +5,43 @@ import 'normalize.css';
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
 
-import MessagesWindow from './MessagesWindow/MessagesWindow';
+import MessagesWindow from '../containers/MessagesWindow';
 
 import FakeHome from './FakeHome';
-import FakeMessages from './FakeMessages';
 import FakeNotify from './FakeNotify';
 
-const App = (props) => {
-  const { filter } = props.match.params;
-  let RenderComponent;
+class App extends React.Component {
 
-  switch (filter) {
-    case 'home':
-      RenderComponent = FakeHome;
-      break;
-    case 'messages':
-      RenderComponent = FakeMessages;
-      break;
-    case 'notifycation':
-      RenderComponent = FakeNotify;
-      break;
-    default:
-      RenderComponent = FakeHome;
-  }
+  render() {
+    const { filter } = this.props.match.params;
+    let RenderComponent;
 
-  return (
-    <Fragment>
+    switch (filter) {
+      case 'home':
+        RenderComponent = FakeHome;
+        break;
+      case 'messages':
+        RenderComponent = MessagesWindow;
+        break;
+      case 'notifycation':
+        RenderComponent = FakeNotify;
+        break;
+      default:
+        RenderComponent = FakeHome;
+    }
+
+    return (
+      <Fragment>
         <Sider/>
         <div className="page">
           <Header/>
           <RenderComponent/>
         </div>
         <Sider/>
-    </Fragment>
-  );
-};
+      </Fragment>
+    )
+  }
+}
 
 App.propTypes = {
   match: PropTypes.object,
