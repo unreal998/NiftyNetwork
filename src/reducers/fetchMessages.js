@@ -1,4 +1,4 @@
-import {SUCCESS_FETCH_MESSAGES} from "../actions/fetchMessages";
+import { SUCCESS_FETCH_MESSAGES } from '../actions/fetchMessages';
 
 export default (state = {}, action) => {
   console.log(state);

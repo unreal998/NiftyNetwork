@@ -33,16 +33,16 @@ const App = (props) => {
     default:
       RenderComponent = AuthPage;
   }
-    return (
-      <Fragment>
-        <Sider/>
-        <div className="page">
-          <Header/>
-          <RenderComponent/>
-        </div>
-        <Sider/>
-      </Fragment>
-    );
+  return (
+    <Fragment>
+      <Sider/>
+      <div className="page">
+        <Header/>
+        <RenderComponent/>
+      </div>
+      <Sider/>
+    </Fragment>
+  );
 };
 
 App.propTypes = {

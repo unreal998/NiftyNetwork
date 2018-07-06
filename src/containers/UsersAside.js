@@ -1,4 +1,4 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import UsersAside from '../components/UsersAside/UsersAside';
 
@@ -7,6 +7,6 @@ const mapStateToProps = state => ({
   messages: state.messages,
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = () => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(UsersAside);
