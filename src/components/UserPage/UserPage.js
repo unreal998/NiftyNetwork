@@ -16,7 +16,7 @@ class UserPage extends Component {
     return (
         <div className="content">
           <div className="infoBlock">
-              <UserInfo userName="Maks" userAge="19" userGender="male" userPhone="88005553535" />
+              <UserInfo userName="Maks" userAge={19} userGender="male" userPhone={88005553535} />
               <NewPosts/>
           </div>
           <main className="userNifts">
