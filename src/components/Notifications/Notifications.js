@@ -18,12 +18,12 @@ class Notifications extends Component {
     console.log(date);
     return (
       <div className="notificationContainer">
-      <Nnift likes = "844" repost = "400" name="Zagagulina" date= {date} smallIcon={photoIcon} largeIcon = {photoIconLar} />
-      <Nnift likes = "30" repost = "4" name="Paroskovia" date= {date} smallIcon={photoIcon2} largeIcon = {photoIconLar2} />
-      <Nnift likes = "43" repost = "1" name="Marusia" date= {date} smallIcon={photoIcon3} largeIcon = {photoIconLar3} />
-      <Nnift likes = "94" repost = "18" name="Ustina" date= {date} smallIcon={photoSmall} largeIcon = {photo} />
+      <Nnift likes = "844" repost = "400" name="Unreal" date= {date} smallIcon={photoIcon} largeIcon = {photoIconLar} />
+      <Nnift likes = "30" repost = "4" name="Telegram" date= {date} smallIcon={photoIcon2} largeIcon = {photoIconLar2} />
+      <Nnift likes = "43" repost = "1" name="VK" date= {date} smallIcon={photoIcon3} largeIcon = {photoIconLar3} />
+      <Nnift likes = "94" repost = "18" name="Random Name" date= {date} smallIcon={photoSmall} largeIcon = {photo} />
       <Nnift likes = "23" repost = "0" name="Rozetka" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
-      <Nnift likes = "53" repost = "11" name="Efracinia" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
+      <Nnift likes = "53" repost = "11" name="Twitter" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
       <Nnift likes = "69" repost = "96" name="Facebook" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
       <Nnift likes = "66" repost = "6" name="First and Second name" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
       </div>
