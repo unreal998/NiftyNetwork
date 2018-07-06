@@ -5,14 +5,17 @@ import './UserContactAside.scss';
 
 const UserContactAside = props => (
     <div className="userContactAside">
-        <img src={props.icon} alt="photoIcon"/>
-        <span>{props.name} {props.surname}</span>
-        <span>{props.amountMessages}</span>
+        <img src={ props.icon } alt="photoIcon"/>
+        <span>{ props.name} { props.surname }</span>
+        <span>{ props.amountMessages }</span>
     </div>
 );
 
 UserContactAside.propTypes = {
-  colMessages: PropTypes.number,
+  amountMessages: PropTypes.number,
+  icon: PropTypes.string,
+  name: PropTypes.string,
+  surname: PropTypes.string,
 };
 
 export default UserContactAside;

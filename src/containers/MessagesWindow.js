@@ -1,11 +1,11 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import MessagesWindow from '../components/MessagesWindow/MessagesWindow';
 
-import {successFetchUsers} from "../actions/fetchUsers";
-import {successFetchMessages} from "../actions/fetchMessages";
+import { successFetchUsers } from '../actions/fetchUsers';
+import { successFetchMessages } from '../actions/fetchMessages';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
   fetchUsers: users => dispatch(successFetchUsers(users)),
