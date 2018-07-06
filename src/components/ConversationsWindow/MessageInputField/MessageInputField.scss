@@ -1,0 +1,45 @@
+.messageInputField {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.messageInputField {
+  img {
+    border-radius: 100px;
+    margin-right: 10px;
+  }
+}
+
+.messageInputField {
+  input {
+    flex: 1 1 auto;
+    padding: 0 5px 0 5px;
+    outline: 0;
+    border: none;
+    font-size: 1.5em;
+  }
+  a {
+    padding: 0 5px 0 5px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+}
+
+.messageInputField {
+  a:first-of-type {
+    border-radius: 5px 0 0 5px;
+    background: white url("../../../icons/attachFile.png") no-repeat center center;
+    background-size: 32px 32px;
+    border-right: 3px solid gray;
+  }
+  a:last-of-type {
+    border-radius: 0 5px 5px 0;
+    background: white url("../../../icons/sendMessage.png") no-repeat center center;
+    background-size: 32px 32px;
+    border-left: 3px solid gray;
+  }
+}

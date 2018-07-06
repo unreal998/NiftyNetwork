@@ -23,6 +23,7 @@
     "no-confusing-arrow": "off",
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "no-trailing-spaces": ["error", { "skipBlankLines": true }],
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "windows"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }

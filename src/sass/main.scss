@@ -43,6 +43,7 @@ body{
 .contentPage{
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 .userMainIcon {
     display: flex;
@@ -109,3 +110,5 @@ body{
         text-decoration: underline;
     }
 }
+
+

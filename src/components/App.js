@@ -4,7 +4,7 @@ import React, { Fragment, Component } from 'react';
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
 import AuthPage from './AuthPage/AuthPage';
-// import UserPage from './UserPage/UserPage';
+
 // import Notifications from './Notifications/Notifications'
 import Links from '../Links';
 

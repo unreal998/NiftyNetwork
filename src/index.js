@@ -7,33 +7,23 @@ import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 
-import { createLogger } from 'redux-logger';
-import * as firebase from 'firebase';
+// import App from './components/App';
 import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
 // import App from './components/App';
 import Notifications from './components/Notifications/Notifications';
-import FakeMessages from './components/FakeMessages';
+import Messages from './components/MessagesWindow/MessagesWindow';
 import UserPage from './components/UserPage/UserPage';
 import AuthPage from './components/AuthPage/AuthPage';
-
-// Initialize Firebase
-const config = {
-  apiKey: 'AIzaSyDy8lYEmE4Rs9A66Hf5mWc6GujfB9Mo1SY',
-  authDomain: 'react-redux-firebise.firebaseapp.com',
-  databaseURL: 'https://react-redux-firebise.firebaseio.com',
-  projectId: 'react-redux-firebise',
-  storageBucket: 'react-redux-firebise.appspot.com',
-  messagingSenderId: '799988958832',
-};
-firebase.initializeApp(config);
-
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(sagaMiddleware, createLogger()),
+  /* eslint-disable no-underscore-dangle */
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  /* eslint-enable */
+  applyMiddleware(sagaMiddleware),
 );
 const auth = true;
 sagaMiddleware.run(rootSaga);
@@ -44,7 +34,7 @@ ReactDOM.render(
         <Route path="/home" component={UserPage}/>
         <Route path="/auth" component={AuthPage}/>
         <Route path="/notifycation" component={Notifications}/>
-        <Route path="/messages" component={FakeMessages}/>
+        <Route path="/messages" component={Messages}/>
         <Route path='/' render = {() => auth ? <Redirect to= "/home"/> : <Redirect to= "/auth"/>}/>
       </Switch>
       </BrowserRouter>
