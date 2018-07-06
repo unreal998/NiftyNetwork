@@ -4,32 +4,35 @@ import PropTypes from 'prop-types';
 import 'normalize.css';
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
-
+import Notifications from './Notifications/Notifications';
+import UserPage from './UserPage/UserPage';
+import AuthPage from './AuthPage/AuthPage';
+import SignUpPage from './SignUpPage/SignUpPage';
 import MessagesWindow from '../containers/MessagesWindow';
 
-import FakeHome from './FakeHome';
-import FakeNotify from './FakeNotify';
+const App = (props) => {
+  const { filter } = props.match.params;
+  let RenderComponent;
 
-class App extends React.Component {
-
-  render() {
-    const { filter } = this.props.match.params;
-    let RenderComponent;
-
-    switch (filter) {
-      case 'home':
-        RenderComponent = FakeHome;
-        break;
-      case 'messages':
-        RenderComponent = MessagesWindow;
-        break;
-      case 'notifycation':
-        RenderComponent = FakeNotify;
-        break;
-      default:
-        RenderComponent = FakeHome;
-    }
-
+  switch (filter) {
+    case 'home':
+      RenderComponent = UserPage;
+      break;
+    case 'messages':
+      RenderComponent = MessagesWindow;
+      break;
+    case 'notifycation':
+      RenderComponent = Notifications;
+      break;
+    case 'auth':
+      RenderComponent = AuthPage;
+      break;
+    case 'signup':
+      RenderComponent = SignUpPage;
+      break;
+    default:
+      RenderComponent = AuthPage;
+  }
     return (
       <Fragment>
         <Sider/>
@@ -39,9 +42,8 @@ class App extends React.Component {
         </div>
         <Sider/>
       </Fragment>
-    )
-  }
-}
+    );
+};
 
 App.propTypes = {
   match: PropTypes.object,

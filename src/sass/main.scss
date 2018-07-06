@@ -7,17 +7,18 @@ $panel-padding: 10px;
 $inside-padding: 7px;
 $header-height: 55px;
 $page-font-size: 0.9em;
-$header-font: "sans";
-$text-font: "monospace";
-
-body {
+$header-font: "Gadugi", sans-serif;
+$text-font: "Corbel",sans-serif;
+#root {
     background-color: $back-color;
 }
 
 #root {
     display: flex;
 }
-
+body{
+    background-color: $back-color
+}
 .siders {
     width: 10%;
 }
@@ -26,24 +27,19 @@ body {
     background-color: inherit;
     border: none;
     outline: none;
+    text-align: unset;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
 }
 
 .page {
     flex-grow: 1;
     font-family: sans-serif;
+    width: 80%;
 }
 
-.content {
-    margin-top: 15px;
-    display: flex;
-}
 
-.userNifts {
-    flex: 1 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
 
 .userMainIcon {
     display: flex;
@@ -52,6 +48,12 @@ body {
     img {
         width: 70%;
     }
+}
+.userMinIcon{
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+
 }
 
 .userMainIcon,
@@ -92,6 +94,7 @@ body {
 }
 
 .toggler {
+    width: 100%;
     background-color: inherit;
     color: $main-gray;
     text-transform: lowercase;
@@ -103,3 +106,5 @@ body {
         text-decoration: underline;
     }
 }
+
+

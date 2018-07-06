@@ -1,0 +1,25 @@
+@import "../../sass/main";
+@import '../../sass/form';
+
+.authBtns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.signInBtn{
+    background-color: #579;
+    &:hover {
+      background-color: #779;
+    }
+
+}
+.signUpBtn {
+  background-color: #666;
+  &:hover {
+    background-color: #555;
+  }
+}
+
+

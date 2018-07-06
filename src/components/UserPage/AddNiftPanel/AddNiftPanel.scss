@@ -1,0 +1,26 @@
+@import "../../../sass/main";
+
+
+.addNiftPanel{
+  display: flex;
+  align-items: center;
+  background-color: rgba($color: $back-color+50, $alpha: 0.4);
+ padding: $inside-padding;
+}
+
+#niftItput{
+  box-sizing: content-box;
+  display: block;
+  margin: 10px;
+  min-width: 40px;
+  resize: vertical;
+  flex: 1 0 auto;
+  border-radius: 10px;
+  border:none;
+  padding: 10px;
+  &:focus{
+    margin: 8px;
+    border: 2px solid rgba($color: $main-gray, $alpha: 0.5);
+    outline: none;
+  }
+}
