@@ -8,8 +8,6 @@ import UserNifters from './UserNifters/UserNifters';
 
 import photoMin from '../../icons/photo-min.png';
 import photo from '../../icons/photo.png';
-
-
 import './UserPage.scss';
 
 class UserPage extends Component {
@@ -18,7 +16,7 @@ class UserPage extends Component {
     return (
         <div className="content">
           <div className="infoBlock">
-              <UserInfo/>
+              <UserInfo userName="Maks" userAge="19" userGender="male" userPhone="88005553535" />
               <NewPosts/>
           </div>
           <main className="userNifts">

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import './Header.scss';
 import photoMin from '../../icons/photo-min.png';
 import homeIcon from '../../icons/home.png';
