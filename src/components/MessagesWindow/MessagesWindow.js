@@ -12,7 +12,6 @@ const MessagesWindow = () => (
   </div>
 );
 
-
 MessagesWindow.propTypes = {
   fetchMessages: PropTypes.func,
   fetchUsers: PropTypes.func,

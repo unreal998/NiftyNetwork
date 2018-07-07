@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropsTypes from 'prop-types';
 import './AuthPage.scss';
+import PropTypes from 'prop-types';
 
 export default class AuthPage extends Component {
   render() {

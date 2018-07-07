@@ -1,38 +1,32 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, Component } from 'react';
 
-import 'normalize.css';
+
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
+
 import Notifications from './Notifications/Notifications';
 import UserPage from './UserPage/UserPage';
 import AuthPage from '../containers/AuthPage';
 import SignUpPage from '../containers/SignUpPage';
 import MessagesWindow from '../containers/MessagesWindow';
 
-const App = (props) => {
-  const { filter } = props.match.params;
-  let RenderComponent;
+// import Notifications from './Notifications/Notifications'
+import Links from '../Links';
 
-  switch (filter) {
-    case 'home':
-      RenderComponent = UserPage;
-      break;
-    case 'messages':
-      RenderComponent = MessagesWindow;
-      break;
-    case 'notifycation':
-      RenderComponent = Notifications;
-      break;
-    case 'auth':
-      RenderComponent = AuthPage;
-      break;
-    case 'signup':
-      RenderComponent = SignUpPage;
-      break;
-    default:
-      RenderComponent = AuthPage;
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      auth: true,
+    };
   }
+
+  Auth() {
+    this.setState({
+      auth: false,
+    });
+  }
+
   return (
     <Fragment>
       <Sider/>
