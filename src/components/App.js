@@ -3,7 +3,12 @@ import React, { Fragment, Component } from 'react';
 
 import Header from './Header/Header';
 import Sider from './Sider/Sider';
-import AuthPage from './AuthPage/AuthPage';
+
+import Notifications from './Notifications/Notifications';
+import UserPage from './UserPage/UserPage';
+import AuthPage from '../containers/AuthPage';
+import SignUpPage from '../containers/SignUpPage';
+import MessagesWindow from '../containers/MessagesWindow';
 
 // import Notifications from './Notifications/Notifications'
 import Links from '../Links';
@@ -22,18 +27,20 @@ class App extends Component {
     });
   }
 
-  render() {
-    console.log(this);
-    return (
-      <Fragment>
-          <Sider/>
-          <div className="page" >
-          {this.state.auth ? <div><Header/><Links/></div> : <AuthPage/>}
-          </div>
-          <Sider/>
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <Sider/>
+      <div className="page">
+        <Header/>
+        <RenderComponent/>
+      </div>
+      <Sider/>
+    </Fragment>
+  );
+};
+
+App.propTypes = {
+  match: PropTypes.object,
+};
 
 export default App;
