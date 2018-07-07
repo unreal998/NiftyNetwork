@@ -10,11 +10,34 @@ export default class SignUpPage extends Component {
     let emailInput;
     let passwordInput;
 
+    let bufNameInput;
+    let bufSurnameInput;
+    let nameInput;
+    let surnameInput;
+
     return (
       <div className="formWindow">
         <div className="form">
           <div className="formHead">Create account in Nifty!</div>
           <div className="formField">
+            <div className="formField">
+              <label htmlFor="name" className="fieldLabel">Name:</label>
+              <input
+                ref={ (node) => { bufNameInput = node; } }
+                onChange={ () => { nameInput = bufNameInput.value; } }
+                type="text"
+                id="name"
+                className="fieldInput"></input>
+            </div>
+            <div className="formField">
+              <label htmlFor="surname" className="fieldLabel">Surname:</label>
+              <input
+                ref={ (node) => { bufSurnameInput = node; } }
+                onChange={ () => { surnameInput = bufSurnameInput.value; } }
+                type="text"
+                id="surname"
+                className="fieldInput"></input>
+            </div>
             <label htmlFor="email" className="fieldLabel">E-mail:</label>
             <input
               ref={ (node) => { bufEmailInput = node; } }
@@ -38,7 +61,9 @@ export default class SignUpPage extends Component {
           </div>
           <div className="authBtns">
             <button
-              onClick={ () => this.props.createUser(emailInput, passwordInput) }
+              onClick={ () => this.props.createUser(
+                emailInput, passwordInput, nameInput, surnameInput,
+              )}
               className="formBtn createAccountBtn">Create account</button>
           </div>
 

@@ -6,7 +6,12 @@ import { createUser } from '../actions/createUser';
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch => ({
-  createUser: (email, password) => dispatch(createUser(email, password)),
+  createUser: (
+    email,
+    password,
+    name,
+    surnmae,
+  ) => dispatch(createUser(email, password, name, surnmae)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUpPage);
