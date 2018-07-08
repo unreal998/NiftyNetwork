@@ -7,7 +7,6 @@ import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 
-import App from './components/App';
 
 import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
