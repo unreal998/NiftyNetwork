@@ -10,7 +10,6 @@ import {
 // import App from './components/App';
 import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
-// import App from './components/App';
 import Notifications from './components/Notifications/Notifications';
 import Messages from './components/MessagesWindow/MessagesWindow';
 import UserPage from './components/UserPage/UserPage';
