@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropsTypes from 'prop-types';
+import { Redirect, Link } from 'react-router-dom';
+
 import './AuthPage.scss';
 
 export default class AuthPage extends Component {
@@ -9,6 +11,11 @@ export default class AuthPage extends Component {
     let emailInput;
     let passwordInput;
 
+    console.log(this.props.currentUser);
+
+    if (Object.keys(this.props.currentUser).length !== 0) {
+      return <Redirect to='/home'/>;
+    }
     return (
       <div className="formWindow">
         <div className="form">
@@ -34,12 +41,12 @@ export default class AuthPage extends Component {
           <div className="authBtns">
             <button onClick={() => this.props.signInUser(emailInput, passwordInput)} className="formBtn signInBtn">Sign in</button>
             <span>or</span>
-            <button className="formBtn signUpBtn">Sign up</button>
+            <Link to='/signup' className="formBtn signUpBtn">Sign up</Link>
           </div>
           <div className="formFooter">
             <div className="authFooterItem"><a href="#" className="formFooterLink">Forgot password?</a></div>
           </div>
-       </div>
+        </div>
       </div>
     );
   }
@@ -47,4 +54,6 @@ export default class AuthPage extends Component {
 
 AuthPage.propTypes = {
   signInUser: PropsTypes.func,
+  currentUser: PropsTypes.object,
+  toSignUpPage: PropsTypes.func,
 };

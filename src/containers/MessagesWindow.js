@@ -2,7 +2,9 @@ import { connect } from 'react-redux';
 
 import MessagesWindow from '../components/MessagesWindow/MessagesWindow';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+  currentUser: state.currentUser,
+});
 
 const mapDispatchToProps = () => ({});
 

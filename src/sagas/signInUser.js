@@ -10,8 +10,9 @@ function* signInUser(action) {
       action.email,
       action.password,
     );
-
-    yield put(successSignInUser(response.user));
+    const { user } = response;
+    const userForStore = { ...user.providerData[0], uid: user.uid, metadata: user.metadata };
+    yield put(successSignInUser(userForStore));
   } catch (err) {
     yield put(failureSignInUser(err));
   }

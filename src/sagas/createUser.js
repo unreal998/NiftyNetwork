@@ -23,7 +23,6 @@ function* createUser(action) {
       try {
         const newUserRef = databaseRef.child('users').push();
         const userForDB = { ...user.providerData[0], uid: user.uid, metadata: user.metadata };
-        console.log(userForDB);
         yield call(
           [newUserRef, newUserRef.set],
           userForDB,
