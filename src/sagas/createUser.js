@@ -12,7 +12,7 @@ function* createUser(action) {
     );
 
     const { user } = response;
-
+    console.log(user);
     try {
       yield call(
         [user, user.updateProfile],
@@ -22,7 +22,7 @@ function* createUser(action) {
       );
       try {
         const newUserRef = databaseRef.child('users').push();
-        const userForDB = { ...user.providerData[0] };
+        const userForDB = { ...user.providerData[0], uid: user.uid, metadata: user.metadata };
         console.log(userForDB);
         yield call(
           [newUserRef, newUserRef.set],
