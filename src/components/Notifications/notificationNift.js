@@ -13,8 +13,8 @@ function Nnift(props) {
               <img src={props.smallIcon} />
               <p>{props.name} nifted:</p>
             </div>
+            <hr/>
           </div>
-          <hr/>
           <div className = "niftBody">
             <img src={props.largeIcon} />
             <h1>{props.text}</h1>
@@ -38,8 +38,8 @@ Nnift.propTypes = {
   text: PropsType.string,
   name: PropsType.string,
   date: PropsType.string,
-  likes: PropsType.number,
-  repost: PropsType.number,
+  likes: PropsType.string,
+  repost: PropsType.string,
 };
 
 
