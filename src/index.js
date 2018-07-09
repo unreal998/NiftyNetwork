@@ -7,9 +7,10 @@ import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 
-// import App from './components/App';
+
 import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
+// import App from './components/App';
 import Notifications from './components/Notifications/Notifications';
 import Messages from './components/MessagesWindow/MessagesWindow';
 import UserPage from './components/UserPage/UserPage';
@@ -25,6 +26,7 @@ const store = createStore(
   applyMiddleware(sagaMiddleware),
 );
 const auth = true;
+
 sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <Provider store={ store }>
