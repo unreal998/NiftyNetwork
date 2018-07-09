@@ -7,7 +7,7 @@ import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 
-// import App from './components/App';
+
 import rootReducer from './reducers/rootReducer';
 import rootSaga from './sagas/rootSaga';
 // import App from './components/App';
@@ -26,6 +26,7 @@ const store = createStore(
   applyMiddleware(sagaMiddleware),
 );
 const auth = true;
+
 sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <Provider store={ store }>
