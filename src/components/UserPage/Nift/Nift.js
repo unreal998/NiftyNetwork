@@ -7,7 +7,6 @@ import like from '../../../icons/like.svg';
 import repost from '../../../icons/repost.svg';
 
 function Nift(props) {
-  console.log(props);
   return (
     <div className="nift">
       <img src={props.icon} alt="" className="userMinIcon"/>

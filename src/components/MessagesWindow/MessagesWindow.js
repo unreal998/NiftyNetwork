@@ -8,24 +8,31 @@ import UsersAside from '../../containers/UsersAside';
 import ConversationsWindow from '../ConversationsWindow/ConversationsWindow';
 import './MessagesWindow.scss';
 
-const MessagesWindow = (props) => {
-  if (Object.keys(props.currentUser).length === 0) {
-    return <Redirect to='/auth'/>;
+class MessagesWindow extends React.Component {
+  componentDidMount() {
+    this.props.fetchUsers();
   }
-  return (
-    <Fragment>
-      <Siders/>
+
+  render() {
+    if (Object.keys(this.props.currentUser).length === 0) {
+      return <Redirect to='/auth'/>;
+    }
+
+    return (
+      <Fragment>
+        <Siders/>
         <div className= "contentPage">
           <Header/>
-            <div className="messagesWindow">
-              <UsersAside/>
-              <ConversationsWindow/>
-            </div>
+          <div className="messagesWindow">
+            <UsersAside/>
+            <ConversationsWindow/>
+          </div>
         </div>
-      <Siders/>
-    </Fragment>
-  );
-};
+        <Siders/>
+      </Fragment>
+    );
+  }
+}
 
 MessagesWindow.propTypes = {
   fetchMessages: PropTypes.func,

@@ -11,8 +11,7 @@ function* signInUser(action) {
       action.password,
     );
     const { user } = response;
-    const userForStore = { ...user.providerData[0], uid: user.uid, metadata: user.metadata };
-    yield put(successSignInUser(userForStore));
+    yield put(successSignInUser(user.uid));
   } catch (err) {
     yield put(failureSignInUser(err));
   }
