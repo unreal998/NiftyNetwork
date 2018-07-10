@@ -15,7 +15,6 @@ import Header from '../Header/Header';
 
 
 class UserPage extends Component {
-
   render() {
     const styleBody = {
       backgroundColor: this.props.colorBody,

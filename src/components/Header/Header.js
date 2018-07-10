@@ -62,7 +62,7 @@ class Header extends Component {
               <button className="appBtn"><img src={settings} alt="" /></button>
               <div className= "setingsContainer" >
               <div className= "colorSheme">
-                <input type="color" id="head" value={this.props.colorHeader} onChange={event => this.props.ChangeColorHeader(event.target.value)}/>
+                HeadColor <input type="color" id="head" value={this.props.colorHeader} onChange={event => this.props.ChangeColorHeader(event.target.value)}/>
                 <input type="color" id="body" value={this.props.colorBody} onChange={event => this.props.ChangeColorBody(event.target.value)}/>
                 <input type="color" id="text" value={this.props.colorText} onChange={event => this.props.ChangeColorText(event.target.value)}/>
                 <input type="color" id="nifts"value={this.props.colorNift} onChange={event => this.props.ChangeColorNift(event.target.value)}/>
