@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import * as firebase from 'firebase';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import photoIcon from '../../icons/photoIcon.png';
 import photoIconLar from '../../icons/photoIconLar.jpg';
 import Nnift from './notificationNift';
@@ -13,40 +14,49 @@ import 'normalize.css';
 import './Notification.scss';
 import Siders from '../Sider/Sider';
 import Header from '../Header/Header';
+import { databaseRef } from '../../firebase/firebase';
 
 class Notifications extends Component {
   constructor() {
     super();
     console.log(this);
+    this.state = {
+      date: new Date().toDateString(),
+    };
   }
 
   componentDidMount() {
     console.log(this);
-    const rootRef = firebase.database().ref().child('react-redux-firebise');
-    const userRef = rootRef.child('users');
-    userRef.on('value', (snap) => {
+    const niftyRef = databaseRef.child('nifties');
+
+    const currentNifty = niftyRef.child('nift1');
+    currentNifty.on('value', (snap) => {
       console.log(snap.val());
     });
   }
 
   render() {
-    console.log(this);
-    const date = new Date().toDateString();
-    console.log(date);
+    const styleBody = {
+      backgroundColor: this.props.colorBody,
+    };
+    const styleNift = {
+      backgroundColor: this.props.colorNift,
+    };
+
     return (
       <Fragment>
         <Siders/>
-        <div className= "contentPage">
+        <div className= "contentPage" style={styleBody}>
         <Header/>
       <div className="notificationContainer">
-      <Nnift likes = "844" repost = "400" name="Unreal" date= {date} smallIcon={photoIcon} largeIcon = {photoIconLar} />
-      <Nnift likes = "30" repost = "4" name="Telegram" date= {date} smallIcon={photoIcon2} largeIcon = {photoIconLar2} />
-      <Nnift likes = "43" repost = "1" name="VK" date= {date} smallIcon={photoIcon3} largeIcon = {photoIconLar3} />
-      <Nnift likes = "94" repost = "18" name="Random Name" date= {date} smallIcon={photoSmall} largeIcon = {photo} />
-      <Nnift likes = "23" repost = "0" name="Rozetka" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
-      <Nnift likes = "53" repost = "11" name="Twitter" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
-      <Nnift likes = "69" repost = "96" name="Facebook" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
-      <Nnift likes = "66" repost = "6" name="First and Second name" date= {date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
+      <Nnift niftStyle={styleNift} likes = "844" repost = "400" name="Unreal" date= {this.state.date} smallIcon={photoIcon} largeIcon = {photoIconLar} />
+      <Nnift niftStyle={styleNift} likes = "30" repost = "4" name="Telegram" date= {this.state.date} smallIcon={photoIcon2} largeIcon = {photoIconLar2} />
+      <Nnift niftStyle={styleNift} likes = "43" repost = "1" name="VK" date= {this.state.date} smallIcon={photoIcon3} largeIcon = {photoIconLar3} />
+      <Nnift niftStyle={styleNift} likes = "94" repost = "18" name="Random Name" date= {this.state.date} smallIcon={photoSmall} largeIcon = {photo} />
+      <Nnift niftStyle={styleNift} likes = "23" repost = "0" name="Rozetka" date= {this.state.date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
+      <Nnift niftStyle={styleNift} likes = "53" repost = "11" name="Twitter" date= {this.state.date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
+      <Nnift niftStyle={styleNift} likes = "69" repost = "96" name="Facebook" date= {this.state.date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
+      <Nnift niftStyle={styleNift} likes = "66" repost = "6" name="First and Second name" date= {this.state.date} smallIcon={photoSmall} text = "#FIRSTNIFT" />
       </div>
       </div>
         <Siders/>
@@ -55,4 +65,14 @@ class Notifications extends Component {
   }
 }
 
-export default Notifications;
+const mapStateToProps = state => ({
+  colorBody: state.colorReducer.colorBody,
+  colorNift: state.colorReducer.colorNift,
+});
+
+Notifications.propTypes = {
+  colorBody: PropTypes.string,
+  colorNift: PropTypes.string,
+};
+
+export default connect(mapStateToProps)(Notifications);

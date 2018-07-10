@@ -6,7 +6,7 @@ import repo from '../../icons/repost.svg';
 
 function Nnift(props) {
   return (
-    <div className="notificationNift">
+    <div className="notificationNift" style={props.niftStyle}>
           <div className="niftHeader">
             <p>{props.date}</p>
             <div className="userDataNift">
@@ -35,6 +35,7 @@ function Nnift(props) {
 Nnift.propTypes = {
   smallIcon: PropsType.string,
   largeIcon: PropsType.string,
+  niftStyle: PropsType.object,
   text: PropsType.string,
   name: PropsType.string,
   date: PropsType.string,

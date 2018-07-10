@@ -25,7 +25,7 @@ const store = createStore(
   /* eslint-enable */
   applyMiddleware(sagaMiddleware),
 );
-const auth = true;
+const auth = false;
 
 sagaMiddleware.run(rootSaga);
 ReactDOM.render(
