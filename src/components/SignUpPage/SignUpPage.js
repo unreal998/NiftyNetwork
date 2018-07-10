@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import PropsTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
 import './SignUpPage.scss';
 
 export default class SignUpPage extends Component {
   render() {
+    if (Object.keys(this.props.currentUser).length !== 0) {
+      return <Redirect to='/home'/>;
+    }
+
     let bufEmailInput;
     let bufPasswordInput;
     let emailInput;
@@ -78,4 +83,5 @@ export default class SignUpPage extends Component {
 
 SignUpPage.propTypes = {
   createUser: PropsTypes.func,
+  currentUser: PropsTypes.object,
 };
