@@ -11,10 +11,10 @@ import 'normalize.css';
 import './UserPage.scss';
 import Siders from '../Sider/Sider';
 import Header from '../Header/Header';
-
+/* eslint-disable */
 class UserPage extends Component {
+  /* eslint-enabled */
   render() {
-    console.log(this);
     return (
       <Fragment>
         <Siders/>

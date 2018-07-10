@@ -13,9 +13,9 @@ export const startSignInUser = () => ({
   type: START_SIGN_IN_USER,
 });
 
-export const successSignInUser = user => ({
+export const successSignInUser = uid => ({
   type: SUCCESS_SIGN_IN_USER,
-  user,
+  uid,
 });
 
 export const failureSignInUser = err => ({

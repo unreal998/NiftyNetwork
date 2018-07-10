@@ -7,10 +7,10 @@ import NotyPrevItem from '../../NotyPrevItem/NotyPrevItem';
 import iconAlternative from '../../../icons/photoIcon3.png';
 import iconMain from '../../../icons/photoIcon.png';
 import iconSecondary from '../../../icons/photoIcon2.png';
-
+/* eslint-disable */
 class UserNifters extends Component {
+  /* eslint-enabled */
   render() {
-    console.log(this);
     return (
     <div className="userNifters">
       <h1 className="headlineText">Nifters</h1>

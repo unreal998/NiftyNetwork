@@ -7,24 +7,19 @@ import UserContactAside from './UserContactAside/UserContactAside';
 const UsersAside = props => (
     <div className="userAside">
       {
-        (function showUsers() {
-          const users = Object.values(props.users);
-
-          return users.map(user => (
-            <UserContactAside
-              key={user.id}
-              name={user.name}
-              surname={user.surname}
-              icon={user.icon}
-              anmountMessages={0}/>
-          ));
-        }())
+        props.usersConversations.map((user) => {
+          console.log(user);
+          const [name, surname] = user.displayName.split(' ');
+          console.log(name, surname);
+          return <UserContactAside key={user.uid} icon='/icon' name={ name } surname={ surname } amountMessages={ 1 }/>;
+        })
       }
     </div>
 );
 
 UsersAside.propTypes = {
-  users: PropTypes.object,
+  usersConversations: PropTypes.array,
+
 };
 
 export default UsersAside;
