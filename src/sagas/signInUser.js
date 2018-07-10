@@ -10,8 +10,8 @@ function* signInUser(action) {
       action.email,
       action.password,
     );
-
-    yield put(successSignInUser(response.user));
+    const { user } = response;
+    yield put(successSignInUser(user.uid));
   } catch (err) {
     yield put(failureSignInUser(err));
   }

@@ -1,0 +1,6 @@
+<Route path='/' render = {() => auth ? <Redirect to= "/home"/> : <Redirect to= "/auth"/>}/>
+
+<Route path="/auth" component={AuthPage}/>
+          <Route path="/signup" component={SignUpPage}/>
+          <Route path="/notifycation" component={Notifications}/>
+          <Route path="/messages" component={Messages}/>

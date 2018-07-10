@@ -7,7 +7,6 @@ import like from '../../../icons/like.svg';
 import repost from '../../../icons/repost.svg';
 
 function Nift(props) {
-  console.log(props);
   return (
     <div className="nift" style={props.niftStyle}>
       <img src={props.icon} alt="" className="userMinIcon"/>
@@ -38,7 +37,7 @@ Nift.propTypes = {
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.string,
   ]),
-  niftStyle: PropTypes.string,
+  niftStyle: PropTypes.object,
 };
 Nift.defaultProps = {
   imgs: [],

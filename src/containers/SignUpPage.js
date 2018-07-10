@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import SignUpPage from '../components/SignUpPage/SignUpPage';
 import { createUser } from '../actions/createUser';
 
-const mapStateToProps = () => ({});
+const mapStateToProps = state => ({
+  currentUser: state.currentUser,
+});
 
 const mapDispatchToProps = dispatch => ({
   createUser: (

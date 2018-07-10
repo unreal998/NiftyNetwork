@@ -12,7 +12,6 @@ function* createUser(action) {
     );
 
     const { user } = response;
-
     try {
       yield call(
         [user, user.updateProfile],
@@ -21,16 +20,14 @@ function* createUser(action) {
         },
       );
       try {
-        const newUserRef = databaseRef.child('users').push();
-        const userForDB = { ...user.providerData[0] };
-        console.log(userForDB);
+        const newUserRef = databaseRef.child('users').child(user.uid);
+        const userForDB = { ...user.providerData[0], uid: user.uid, metadata: user.metadata };
         yield call(
           [newUserRef, newUserRef.set],
           userForDB,
         );
         yield put(successCreateUser(userForDB));
       } catch (err) {
-        console.log(err);
         yield put(failureCreateUser(err));
       }
     } catch (err) {
