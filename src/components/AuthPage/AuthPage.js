@@ -11,7 +11,7 @@ export default class AuthPage extends Component {
     let emailInput = '';
     let passwordInput = '';
 
-    if (Object.keys(this.props.currentUser).length !== 0) {
+    if (this.props.currentUser.displayName !== undefined) {
       return <Redirect to='/home'/>;
     }
     return (
