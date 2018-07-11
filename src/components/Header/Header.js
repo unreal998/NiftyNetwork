@@ -100,7 +100,6 @@ const mapStateToProps = state => ({
   colorBody: state.colorReducer.colorBody,
   colorNift: state.colorReducer.colorNift,
   colorText: state.colorReducer.colorText,
-  userName: state.currentUser.displayName,
 });
 
 const mapDispatchToProps = dispatch => ({
