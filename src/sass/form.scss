@@ -1,9 +1,13 @@
+
+
 .formWindow {
   align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 500px;
+  width: 400px;
+
 }
 .form {
   background-color: rgba($color: $back-color+50, $alpha: 0.4);

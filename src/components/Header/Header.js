@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Header.scss';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+// import { stat } from 'fs';
 import photoMin from '../../icons/photo-min.png';
 import homeIcon from '../../icons/home.png';
 import msgIcon from '../../icons/message.png';
@@ -20,7 +21,7 @@ class Header extends Component {
     };
     this.OpenTab = this.OpenTab.bind(this);
   }
-
+  
   OpenTab() {
     this.setState(prevState => ({
       display: !prevState.display,
@@ -28,6 +29,8 @@ class Header extends Component {
   }
 
   render() {
+    const name = this.props.userName.substr(0, this.props.userName.indexOf(' '));
+
     const settingsDisplaed = {
       display: 'none',
     };
@@ -73,7 +76,7 @@ class Header extends Component {
         </nav>
         <div className="settings">
             <img src={photoMin} alt="" className="userIconMini" />
-            <span className="userProfileName">Dolor</span>
+            <span className="userProfileName">{name}</span>
             <div className="settingsApp">
               <button className="appBtn"><img src={settings} onClick={ this.OpenTab } alt="" /></button>
               <div className= "setingsContainer" style={settingsDisplaed} >
@@ -97,6 +100,7 @@ const mapStateToProps = state => ({
   colorBody: state.colorReducer.colorBody,
   colorNift: state.colorReducer.colorNift,
   colorText: state.colorReducer.colorText,
+  userName: state.currentUser.displayName,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -123,6 +127,7 @@ Header.propTypes = {
   ChangeColorBody: PropTypes.func,
   ChangeColorNift: PropTypes.func,
   ChangeColorText: PropTypes.func,
+  userName: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
