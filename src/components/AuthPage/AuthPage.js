@@ -8,10 +8,10 @@ export default class AuthPage extends Component {
   render() {
     let bufEmailInput;
     let bufPasswordInput;
-    let emailInput;
-    let passwordInput;
+    let emailInput = '';
+    let passwordInput = '';
 
-    if (Object.keys(this.props.currentUser).length !== 0) {
+    if (this.props.currentUser.displayName !== undefined) {
       return <Redirect to='/home'/>;
     }
     return (
@@ -37,7 +37,10 @@ export default class AuthPage extends Component {
               className="fieldInput"></input>
           </div>
           <div className="authBtns">
-            <button onClick={() => this.props.signInUser(emailInput, passwordInput)} className="formBtn signInBtn">Sign in</button>
+            <button onClick={() => this.props.signInUser(
+              emailInput.length === 0 ? 'root@mail.com' : emailInput,
+              passwordInput.length === 0 ? '12345678' : passwordInput,
+            )} className="formBtn signInBtn">Sign in</button>
             <span>or</span>
             <Link to='/signup' className="formBtn signUpBtn">Sign up</Link>
           </div>

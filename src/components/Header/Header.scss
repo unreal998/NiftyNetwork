@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     line-height: $header-height;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .itemImg {
@@ -52,7 +52,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15%;
     
 }
 
@@ -62,6 +61,7 @@
     height: 30px;
     border-radius: 30px;
     border: 1px solid #589;
+    
 }
 
 .userProfileName {
@@ -69,4 +69,5 @@
     font-size: $font-size-header;
     font-weight: bold;
     font-family: sans-serif;
+    margin: 0 10px 0 10px;
 }
