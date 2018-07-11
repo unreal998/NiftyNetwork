@@ -6,10 +6,17 @@ import UsersAside from '../components/UsersAside/UsersAside';
 const getConversationsCurrUser = (currUser, users) => {
   const usersArr = Object.values(users);
   console.log(usersArr);
-  return usersArr.filter((user) => {
-    const idsConversations = Object.keys(currUser.conversations);
-    if (idsConversations.includes(user.uid)) return user;
-  });
+  if(currUser.conversations !== undefined)
+  {
+    return usersArr.filter((user) => {
+      const idsConversations = Object.keys(currUser.conversations);
+      if (idsConversations.includes(user.uid)) return user;
+    });
+  }
+  else{
+    return [];
+  }
+  
 };
 /* eslint-enabled */
 

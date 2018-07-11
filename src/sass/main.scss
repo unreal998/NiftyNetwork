@@ -11,11 +11,11 @@ $header-font: "Gadugi", sans-serif;
 $text-font: "Corbel",sans-serif;
 #root {
     background-color: $back-color;
+    display: flex;
+    justify-content: center;
+    font-family: $text-font;
 }
 
-#root {
-    display: flex;
-}
 body{
     background-color: $back-color
 }
