@@ -13,7 +13,6 @@ import './UserPage.scss';
 import Siders from '../Sider/Sider';
 import Header from '../Header/Header';
 
-
 class UserPage extends Component {
   render() {
     const styleBody = {

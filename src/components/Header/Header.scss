@@ -7,7 +7,16 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.colorSheme{
+  display: flex;
+  flex-direction: column;
+  input{
+    border: 0;
+    padding: 0;
+    border-width: 0;
+    background: none;
+  }
+}
 .nav {
     list-style-type: none;
     padding: 0;
@@ -70,10 +79,18 @@
 .setingsContainer{
   position: absolute;
   display: flex;
+  -ms-flex-order: 1;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: flex-end;
   margin-top: 3%;
   align-items: flex-start;
+  padding: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  background-color: white;
+  border: 1px solid;
+  border-top: 0px;
+  border-color:grey;
 }
 
 .userProfileName {

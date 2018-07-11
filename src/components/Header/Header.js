@@ -15,13 +15,29 @@ import {
 class Header extends Component {
   constructor(props) {
     super(props);
-    console.log(this);
+    this.state = {
+      display: false,
+    };
+    this.OpenTab = this.OpenTab.bind(this);
+  }
+
+  OpenTab() {
+    this.setState(prevState => ({
+      display: !prevState.display,
+    }));
   }
 
   render() {
+    const settingsDisplaed = {
+      display: 'none',
+    };
+    if (this.state.display) {
+      settingsDisplaed.display = 'flex';
+    }
     const headerColor = {
       backgroundColor: this.props.colorHeader,
     };
+    console.log('state', this.state);
     return (
     <header className="header" style={ headerColor }>
         <nav className="navbar">
@@ -59,15 +75,15 @@ class Header extends Component {
             <img src={photoMin} alt="" className="userIconMini" />
             <span className="userProfileName">Dolor</span>
             <div className="settingsApp">
-              <button className="appBtn"><img src={settings} alt="" /></button>
-              <div className= "setingsContainer" >
+              <button className="appBtn"><img src={settings} onClick={ this.OpenTab } alt="" /></button>
+              <div className= "setingsContainer" style={settingsDisplaed} >
               <div className= "colorSheme">
-                HeadColor <input type="color" id="head" value={this.props.colorHeader} onChange={event => this.props.ChangeColorHeader(event.target.value)}/>
-                <input type="color" id="body" value={this.props.colorBody} onChange={event => this.props.ChangeColorBody(event.target.value)}/>
-                <input type="color" id="text" value={this.props.colorText} onChange={event => this.props.ChangeColorText(event.target.value)}/>
-                <input type="color" id="nifts"value={this.props.colorNift} onChange={event => this.props.ChangeColorNift(event.target.value)}/>
+                Head Color <input type="color" id="head" value={this.props.colorHeader} onChange={event => this.props.ChangeColorHeader(event.target.value)}/>
+                Body Color<input type="color" id="body" value={this.props.colorBody} onChange={event => this.props.ChangeColorBody(event.target.value)}/>
+                Text Color<input type="color" id="text" value={this.props.colorText} onChange={event => this.props.ChangeColorText(event.target.value)}/>
+                Nift Color<input type="color" id="nifts"value={this.props.colorNift} onChange={event => this.props.ChangeColorNift(event.target.value)}/>
               </div>
-              <h2>Sign Out</h2>
+              <h3>Sign Out</h3>
             </div>
             </div>
         </div>

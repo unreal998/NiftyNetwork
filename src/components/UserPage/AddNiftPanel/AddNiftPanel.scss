@@ -6,6 +6,11 @@
   align-items: center;
   background-color: rgba($color: $back-color+50, $alpha: 0.4);
  padding: $inside-padding;
+ form{
+  display: flex;
+  width: 100%;
+  align-items: center;
+ }
 }
 
 #niftItput{
