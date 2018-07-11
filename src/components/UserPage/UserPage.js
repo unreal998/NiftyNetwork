@@ -28,7 +28,7 @@ class UserPage extends Component {
         <Header/>
         <div className="content">
           <div className="infoBlock">
-              <UserInfo userName="Maks" userAge={19} userGender="male" userPhone={88005553535} />
+              <UserInfo userName={this.props.userName} userAge={19} userGender="male" userPhone={88005553535} />
               <NewPosts/>
           </div>
           <main className="userNifts">
@@ -53,11 +53,13 @@ class UserPage extends Component {
 const mapStateToProps = state => ({
   colorBody: state.colorReducer.colorBody,
   colorNift: state.colorReducer.colorNift,
+  userName: state.currentUser.displayName,
 });
 
 UserPage.propTypes = {
   colorBody: PropTypes.string,
   colorNift: PropTypes.string,
+  userName: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(UserPage);

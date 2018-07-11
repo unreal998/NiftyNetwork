@@ -15,13 +15,13 @@ const Root = props => (
     <Switch>
       <Route exact path="/"
              render={
-               () => Object.keys(props.currentUser).length === 0 ? <Redirect to='/auth'/> : <Redirect to='/home'/>
+               () => Object.keys(props.currentUser).length === 0 ? <Redirect to='/auth'/> : <Redirect to={`/home/${props.currentUser.uid}`} />
              }/>
-      <Route path="/auth" component={AuthPage}/>
-      <Route path="/signup" component={SignUpPage}/>
-      <Route path="/notifycation" component={Notifications}/>
-      <Route path="/messages" component={Messages}/>
-      <Route path="/home" component={UserPage}/>
+      <Route path='/auth' component={AuthPage}/>
+      <Route path={`/signup/${props.currentUser.uid}`} component={SignUpPage}/>
+      <Route path={`/notifycation/${props.currentUser.uid}`} component={Notifications}/>
+      <Route path={`/messages/${props.currentUser.uid}`} component={Messages}/>
+      <Route path={`/home/${props.currentUser.uid}`} component={UserPage}/>
     </Switch>
   </BrowserRouter>
 );

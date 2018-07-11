@@ -14,25 +14,13 @@ import 'normalize.css';
 import './Notification.scss';
 import Siders from '../Sider/Sider';
 import Header from '../Header/Header';
-import { databaseRef } from '../../firebase/firebase';
 
 class Notifications extends Component {
   constructor() {
     super();
-    console.log(this);
     this.state = {
       date: new Date().toDateString(),
     };
-  }
-
-  componentDidMount() {
-    console.log(this);
-    const niftyRef = databaseRef.child('nifties');
-
-    const currentNifty = niftyRef.child('nift1');
-    currentNifty.on('value', (snap) => {
-      console.log(snap.val());
-    });
   }
 
   render() {

@@ -12,7 +12,7 @@ export default class AuthPage extends Component {
     let passwordInput = '';
 
     if (this.props.currentUser.displayName !== undefined) {
-      return <Redirect to='/home'/>;
+      return <Redirect to={`/home/${this.props.currentUser.uid}`}/>;
     }
     return (
       <div className="formWindow">

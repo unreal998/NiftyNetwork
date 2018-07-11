@@ -30,7 +30,7 @@ class Header extends Component {
 
   render() {
     const name = this.props.userName.substr(0, this.props.userName.indexOf(' '));
-
+    console.log(this.props.uid);
     const settingsDisplaed = {
       display: 'none',
     };
@@ -40,7 +40,6 @@ class Header extends Component {
     const headerColor = {
       backgroundColor: this.props.colorHeader,
     };
-    console.log('state', this.state);
     return (
     <header className="header" style={ headerColor }>
         <nav className="navbar">
@@ -48,7 +47,7 @@ class Header extends Component {
                 <li className="navItem">
                   <Link
                     className="navLink"
-                    to='/home'
+                    to={`/home/${this.props.uid}`}
                   >
                   <img src={homeIcon} alt="" className="itemImg" />
                   Home
@@ -57,7 +56,7 @@ class Header extends Component {
                 <li className="navItem">
                   <Link
                     className="navLink"
-                    to='/notifycation'
+                    to={`/notifycation/${this.props.uid}`}
                   >
                   <img src={notifyIcon} alt="" className="itemImg" />
                   Notifycation</Link>
@@ -66,7 +65,7 @@ class Header extends Component {
                     
                   <Link
                     className="navLink"
-                    to='/messages'
+                    to={`/messages/${this.props.uid}`}
                   >
                   <img src={msgIcon} alt="" className="itemImg" />
                   Messages
@@ -101,7 +100,9 @@ const mapStateToProps = state => ({
   colorNift: state.colorReducer.colorNift,
   colorText: state.colorReducer.colorText,
   userName: state.currentUser.displayName,
+  uid: state.currentUser.uid,
 });
+
 
 const mapDispatchToProps = dispatch => ({
   ChangeColorHeader: (newColorHeader) => {
@@ -128,6 +129,7 @@ Header.propTypes = {
   ChangeColorNift: PropTypes.func,
   ChangeColorText: PropTypes.func,
   userName: PropTypes.string,
+  uid: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

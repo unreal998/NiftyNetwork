@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Sider extends Component {
-  constructor(props) {
-    super(props);
-    console.log(this);
-  }
-
   render() {
     const styleHead = {
       backgroundColor: this.props.colorHeader,

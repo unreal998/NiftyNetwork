@@ -7,7 +7,7 @@ const initalItem = {
 const addNiftReducer = (state = initalItem, action) => {
   switch (action.type) {
     case ADD_ITEM:
-      return { ...state, inputTweet: action.newItem };
+      return { ...state, inputTweet: state.inputTweet + action.newItem };
     default:
       return state;
   }
